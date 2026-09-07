@@ -8,8 +8,7 @@ window.TAVRIDA_DASHBOARD_DATA = {
       "from": "2026-08-19",
       "to": "2026-09-05"
     },
-    "generatedAt": "2026-09-07 04:04",
-    "privacyNote": "В интерфейс не включены email, телефоны, IP, UA и исходные ссылки на загруженные документы."
+    "generatedAt": "2026-09-07 04:23"
   },
   "dictionary": {
     "programs": [
@@ -306,6 +305,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
   "records": [
     {
       "id": "T-001",
+      "displayName": "Черникова Ирина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.09.05 11:50",
       "programs": [
         "Летние школы",
@@ -398,6 +399,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-002",
+      "displayName": "Обезличенный кейс T-002",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.09.05 09:49",
       "programs": [
         "Фестивали"
@@ -493,6 +496,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-003",
+      "displayName": "Обезличенный кейс T-003",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.09.02 14:02",
       "programs": [
         "Летние школы",
@@ -585,6 +590,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-004",
+      "displayName": "Носовская Екатерина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.09.01 22:32",
       "programs": [
         "Летние школы"
@@ -677,6 +684,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-005",
+      "displayName": "Чупин Виктор",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.29 09:03",
       "programs": [
         "Программы Академии «Меганом»"
@@ -764,6 +773,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-006",
+      "displayName": "Тимофеева Алла",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.28 16:59",
       "programs": [
         "Программы Академии «Меганом»",
@@ -853,6 +864,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-007",
+      "displayName": "Бармакова Анастасия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.27 14:19",
       "programs": [
         "Летние школы"
@@ -939,6 +952,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-008",
+      "displayName": "Высоцкая Кристина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.27 08:40",
       "programs": [
         "Программы Академии «Меганом»"
@@ -1029,6 +1044,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-009",
+      "displayName": "Обезличенный кейс T-009",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.26 21:54",
       "programs": [
         "Летние школы"
@@ -1114,6 +1131,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-010",
+      "displayName": "Полякова Юлия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.26 20:32",
       "programs": [
         "Летние школы",
@@ -1206,6 +1225,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-011",
+      "displayName": "Денисов Денис",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.26 11:39",
       "programs": [
         "Летние школы",
@@ -1302,6 +1323,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-012",
+      "displayName": "Обезличенный кейс T-012",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.26 10:59",
       "programs": [
         "Программы Академии «Меганом»"
@@ -1387,6 +1410,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-013",
+      "displayName": "Обезличенный кейс T-013",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.26 09:42",
       "programs": [
         "Программы Академии «Меганом»"
@@ -1475,6 +1500,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-014",
+      "displayName": "Скрябина Эвелина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.25 14:14",
       "programs": [
         "Летние школы",
@@ -1567,6 +1594,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-015",
+      "displayName": "Якимушкина Александра",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.25 10:42",
       "programs": [
         "Программы Академии «Меганом»",
@@ -1671,6 +1700,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-016",
+      "displayName": "Обезличенный кейс T-016",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.25 00:13",
       "programs": [
         "Летние школы"
@@ -1755,6 +1786,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-017",
+      "displayName": "Барбашина Виктория",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.24 20:58",
       "programs": [
         "Летние школы",
@@ -1858,6 +1891,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-018",
+      "displayName": "Парастаева Анна",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.24 17:11",
       "programs": [
         "Программы Академии «Меганом»"
@@ -1957,6 +1992,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-019",
+      "displayName": "Обезличенный кейс T-019",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.23 23:12",
       "programs": [
         "Летние школы"
@@ -2041,6 +2078,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-020",
+      "displayName": "Шкалей Наталья",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.23 12:16",
       "programs": [
         "Летние школы",
@@ -2142,6 +2181,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-021",
+      "displayName": "Дашевский Даниил",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.22 19:36",
       "programs": [
         "Летние школы",
@@ -2235,6 +2276,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-022",
+      "displayName": "Семенеева Дарья",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.22 12:54",
       "programs": [
         "Летние школы",
@@ -2328,6 +2371,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-023",
+      "displayName": "Обезличенный кейс T-023",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.21 18:48",
       "programs": [
         "Летние школы",
@@ -2414,6 +2459,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-024",
+      "displayName": "Обезличенный кейс T-024",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.21 16:39",
       "programs": [
         "Летние школы"
@@ -2509,6 +2556,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-025",
+      "displayName": "Корнышев Иван",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 14:04",
       "programs": [
         "Программы Академии «Меганом»"
@@ -2605,6 +2654,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-026",
+      "displayName": "Красногорская Екатерина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 14:04",
       "programs": [
         "Программы Академии «Меганом»"
@@ -2695,6 +2746,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-027",
+      "displayName": "Мислимова Амина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 14:03",
       "programs": [
         "Программы Академии «Меганом»"
@@ -2787,6 +2840,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-028",
+      "displayName": "Парканская Екатерина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 13:24",
       "programs": [
         "Программы Академии «Меганом»"
@@ -2873,6 +2928,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-029",
+      "displayName": "Ильченко Григорий",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 12:16",
       "programs": [
         "Программы Академии «Меганом»"
@@ -2956,6 +3013,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-030",
+      "displayName": "Фуркина Екатерина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 11:51",
       "programs": [
         "Летние школы"
@@ -3041,6 +3100,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-031",
+      "displayName": "Обезличенный кейс T-031",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.21 11:40",
       "programs": [
         "Летние школы",
@@ -3125,6 +3186,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-032",
+      "displayName": "Нигматуллин Эдуард",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 09:15",
       "programs": [
         "Программы Академии «Меганом»"
@@ -3218,6 +3281,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-033",
+      "displayName": "Кужугет Сайын",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.21 07:48",
       "programs": [
         "Летние школы",
@@ -3310,6 +3375,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-034",
+      "displayName": "Обезличенный кейс T-034",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.21 07:22",
       "programs": [
         "Летние школы"
@@ -3398,6 +3465,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-035",
+      "displayName": "Гуляев Александр",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 21:02",
       "programs": [
         "Программы Академии «Меганом»"
@@ -3478,6 +3547,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-036",
+      "displayName": "Красникова Юлия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 17:01",
       "programs": [
         "Программы Академии «Меганом»"
@@ -3564,6 +3635,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-037",
+      "displayName": "Лемешко Максим",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 16:46",
       "programs": [
         "Летние школы"
@@ -3651,6 +3724,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-038",
+      "displayName": "Тихомолова Вера",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 15:46",
       "programs": [
         "Программы Академии «Меганом»"
@@ -3738,6 +3813,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-039",
+      "displayName": "Пелагенко Елизавета",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 15:41",
       "programs": [
         "Летние школы",
@@ -3840,6 +3917,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-040",
+      "displayName": "Прищепный Роман",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 14:10",
       "programs": [
         "Программы Академии «Меганом»"
@@ -3931,6 +4010,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-041",
+      "displayName": "Гареева Рената",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 12:44",
       "programs": [
         "Летние школы",
@@ -4030,6 +4111,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-042",
+      "displayName": "Обезличенный кейс T-042",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.20 12:27",
       "programs": [
         "Программы Академии «Меганом»"
@@ -4109,6 +4192,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-043",
+      "displayName": "Махинова Анастасия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 12:00",
       "programs": [
         "Программы Академии «Меганом»"
@@ -4194,6 +4279,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-044",
+      "displayName": "Лаврентьев Кирилл",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 11:55",
       "programs": [
         "Программы Академии «Меганом»"
@@ -4281,6 +4368,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-045",
+      "displayName": "Эриксон Каролина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 11:40",
       "programs": [
         "Летние школы",
@@ -4375,6 +4464,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-046",
+      "displayName": "Кислица Анастасия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 11:20",
       "programs": [
         "Программы Академии «Меганом»"
@@ -4461,6 +4552,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-047",
+      "displayName": "Коломойцев Павел",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 11:13",
       "programs": [
         "Программы Академии «Меганом»"
@@ -4554,6 +4647,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-048",
+      "displayName": "Обезличенный кейс T-048",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.20 11:11",
       "programs": [
         "Летние школы"
@@ -4648,6 +4743,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-049",
+      "displayName": "Григорьева Екатерина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 10:28",
       "programs": [
         "Летние школы"
@@ -4737,6 +4834,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-050",
+      "displayName": "Шкреметко Игорь",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 08:49",
       "programs": [
         "Программы Академии «Меганом»",
@@ -4820,6 +4919,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-051",
+      "displayName": "Обезличенный кейс T-051",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.20 07:42",
       "programs": [
         "Летние школы",
@@ -4912,6 +5013,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-052",
+      "displayName": "Обезличенный кейс T-052",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.20 07:32",
       "programs": [
         "Летние школы"
@@ -4995,6 +5098,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-053",
+      "displayName": "Обезличенный кейс T-053",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.20 02:27",
       "programs": [
         "Программы Академии «Меганом»"
@@ -5079,6 +5184,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-054",
+      "displayName": "Малютина Диана",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 00:37",
       "programs": [
         "Летние школы",
@@ -5180,6 +5287,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-055",
+      "displayName": "Сорокина Анастасия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 00:16",
       "programs": [
         "Летние школы",
@@ -5280,6 +5389,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-056",
+      "displayName": "Феденков Алексей",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 00:16",
       "programs": [
         "Программы Академии «Меганом»",
@@ -5382,6 +5493,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-057",
+      "displayName": "Черкасова Ксения",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 00:12",
       "programs": [
         "Летние школы",
@@ -5476,6 +5589,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-058",
+      "displayName": "Полянская Александра",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 00:04",
       "programs": [
         "Летние школы",
@@ -5581,6 +5696,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-059",
+      "displayName": "Шевчук Виктория",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.20 00:00",
       "programs": [
         "Летние школы",
@@ -5665,6 +5782,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-060",
+      "displayName": "Сологуб Мария",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 23:48",
       "programs": [
         "Летние школы"
@@ -5746,6 +5865,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-061",
+      "displayName": "Малашенкова Наталия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 23:32",
       "programs": [
         "Летние школы",
@@ -5849,6 +5970,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-062",
+      "displayName": "Ринасова Ольга",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 23:24",
       "programs": [
         "Летние школы"
@@ -5941,6 +6064,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-063",
+      "displayName": "Осипова Надежда",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 22:56",
       "programs": [
         "Программы Академии «Меганом»"
@@ -6032,6 +6157,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-064",
+      "displayName": "Котвицкая Татьяна",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 21:55",
       "programs": [
         "Летние школы",
@@ -6127,6 +6254,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-065",
+      "displayName": "Русакова Алена",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 21:39",
       "programs": [
         "Летние школы",
@@ -6221,6 +6350,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-066",
+      "displayName": "Обезличенный кейс T-066",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 20:59",
       "programs": [
         "Летние школы"
@@ -6310,6 +6441,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-067",
+      "displayName": "Каликова Мария",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 20:30",
       "programs": [
         "Летние школы",
@@ -6404,6 +6537,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-068",
+      "displayName": "Обезличенный кейс T-068",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 20:25",
       "programs": [
         "Летние школы",
@@ -6503,6 +6638,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-069",
+      "displayName": "Кочетков Павел",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 19:38",
       "programs": [
         "Летние школы"
@@ -6589,6 +6726,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-070",
+      "displayName": "Пьянкова Юлия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 19:30",
       "programs": [
         "Летние школы"
@@ -6673,6 +6812,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-071",
+      "displayName": "Обезличенный кейс T-071",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 19:20",
       "programs": [
         "Программы Академии «Меганом»"
@@ -6758,6 +6899,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-072",
+      "displayName": "Филиппович Мария",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 19:19",
       "programs": [
         "Летние школы",
@@ -6848,6 +6991,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-073",
+      "displayName": "Коваленко Яна",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 17:54",
       "programs": [
         "Программы Академии «Меганом»"
@@ -6941,6 +7086,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-074",
+      "displayName": "Луговской Илья",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 17:28",
       "programs": [
         "Фестивали"
@@ -7040,6 +7187,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-075",
+      "displayName": "Бакулина Эльмира",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 17:24",
       "programs": [
         "Программы Академии «Меганом»",
@@ -7131,6 +7280,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-076",
+      "displayName": "Обезличенный кейс T-076",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 17:18",
       "programs": [
         "Программы Академии «Меганом»"
@@ -7214,6 +7365,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-077",
+      "displayName": "Катина Ярослава",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 16:59",
       "programs": [
         "Программы Академии «Меганом»",
@@ -7306,6 +7459,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-078",
+      "displayName": "Еременко Олеся",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 16:36",
       "programs": [
         "Летние школы",
@@ -7408,6 +7563,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-079",
+      "displayName": "Чесноков Михаил",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 16:29",
       "programs": [
         "Программы Академии «Меганом»"
@@ -7512,6 +7669,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-080",
+      "displayName": "Буторина Екатерина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 16:26",
       "programs": [
         "Летние школы",
@@ -7604,6 +7763,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-081",
+      "displayName": "Обвинцева Александра",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 16:24",
       "programs": [
         "Летние школы",
@@ -7696,6 +7857,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-082",
+      "displayName": "Антонова Полина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 16:18",
       "programs": [
         "Летние школы"
@@ -7789,6 +7952,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-083",
+      "displayName": "Обезличенный кейс T-083",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 15:52",
       "programs": [
         "Программы Академии «Меганом»"
@@ -7869,6 +8034,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-084",
+      "displayName": "Макарова Таня",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 15:51",
       "programs": [
         "Летние школы",
@@ -7959,6 +8126,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-085",
+      "displayName": "Афонин Михаил",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 15:28",
       "programs": [
         "Летние школы"
@@ -8048,6 +8217,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-086",
+      "displayName": "Костина Таисия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 15:24",
       "programs": [
         "Летние школы",
@@ -8135,6 +8306,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-087",
+      "displayName": "Обезличенный кейс T-087",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 15:15",
       "programs": [
         "Программы Академии «Меганом»"
@@ -8233,6 +8406,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-088",
+      "displayName": "Коршун Екатерина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 15:05",
       "programs": [
         "Летние школы",
@@ -8340,6 +8515,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-089",
+      "displayName": "Чернова Татьяна",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:52",
       "programs": [
         "Программы Академии «Меганом»"
@@ -8420,6 +8597,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-090",
+      "displayName": "Исангулова Линара",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:50",
       "programs": [
         "Летние школы"
@@ -8511,6 +8690,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-091",
+      "displayName": "Деордиева Евгения",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:49",
       "programs": [
         "Летние школы"
@@ -8592,6 +8773,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-092",
+      "displayName": "Тимофеева Маргарита",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:28",
       "programs": [
         "Программы Академии «Меганом»",
@@ -8678,6 +8861,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-093",
+      "displayName": "Ланина Татьяна",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:24",
       "programs": [
         "Программы Академии «Меганом»"
@@ -8759,6 +8944,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-094",
+      "displayName": "Обезличенный кейс T-094",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 14:22",
       "programs": [
         "Программы Академии «Меганом»"
@@ -8839,6 +9026,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-095",
+      "displayName": "Таранов Иван",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:19",
       "programs": [
         "Летние школы"
@@ -8931,6 +9120,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-096",
+      "displayName": "Мурашко Гордей",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:17",
       "programs": [
         "Летние школы",
@@ -9029,6 +9220,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-097",
+      "displayName": "Обезличенный кейс T-097",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 14:16",
       "programs": [
         "Программы Академии «Меганом»"
@@ -9111,6 +9304,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-098",
+      "displayName": "мурашова марина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:15",
       "programs": [
         "Программы Академии «Меганом»"
@@ -9201,6 +9396,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-099",
+      "displayName": "Белова Марич",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:12",
       "programs": [
         "Летние школы",
@@ -9300,6 +9497,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-100",
+      "displayName": "Шакирзянова Олеся",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:05",
       "programs": [
         "Летние школы"
@@ -9395,6 +9594,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-101",
+      "displayName": "Фролов Кирилл",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:05",
       "programs": [
         "Летние школы",
@@ -9490,6 +9691,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-102",
+      "displayName": "Прокудин Павел",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:03",
       "programs": [
         "Программы Академии «Меганом»"
@@ -9579,6 +9782,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-103",
+      "displayName": "Обезличенный кейс T-103",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 14:03",
       "programs": [
         "Летние школы",
@@ -9671,6 +9876,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-104",
+      "displayName": "Гукасян Ануш",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:02",
       "programs": [
         "Программы Академии «Меганом»"
@@ -9757,6 +9964,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-105",
+      "displayName": "Шабанова Елена",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 14:02",
       "programs": [
         "Летние школы",
@@ -9845,6 +10054,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-106",
+      "displayName": "Прищепа Константин",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:56",
       "programs": [
         "Программы Академии «Меганом»"
@@ -9928,6 +10139,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-107",
+      "displayName": "Внуков Сергей",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:55",
       "programs": [
         "Летние школы",
@@ -10027,6 +10240,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-108",
+      "displayName": "Рубцов Кирилл",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:49",
       "programs": [
         "Летние школы",
@@ -10126,6 +10341,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-109",
+      "displayName": "Батухтина Анна",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:43",
       "programs": [
         "Летние школы",
@@ -10231,6 +10448,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-110",
+      "displayName": "Стручков Олег",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:34",
       "programs": [
         "Летние школы",
@@ -10325,6 +10544,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-111",
+      "displayName": "Паташова Алина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:28",
       "programs": [
         "Летние школы"
@@ -10407,6 +10628,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-112",
+      "displayName": "Шевела Элар",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:20",
       "programs": [
         "Летние школы",
@@ -10503,6 +10726,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-113",
+      "displayName": "Мзокова Мария",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:19",
       "programs": [
         "Программы Академии «Меганом»"
@@ -10584,6 +10809,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-114",
+      "displayName": "Широбоков Егор",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:17",
       "programs": [
         "Программы Академии «Меганом»"
@@ -10666,6 +10893,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-115",
+      "displayName": "Обезличенный кейс T-115",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 13:17",
       "programs": [
         "Программы Академии «Меганом»"
@@ -10748,6 +10977,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-116",
+      "displayName": "Сухоловская Алина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:14",
       "programs": [
         "Летние школы"
@@ -10842,6 +11073,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-117",
+      "displayName": "Ходоченко Анастасия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:14",
       "programs": [
         "Летние школы",
@@ -10947,6 +11180,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-118",
+      "displayName": "Ежова Анастасия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:13",
       "programs": [
         "Летние школы"
@@ -11035,6 +11270,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-119",
+      "displayName": "Бажанов Никита",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:12",
       "programs": [
         "Летние школы",
@@ -11129,6 +11366,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-120",
+      "displayName": "Глацких Татьяна",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:09",
       "programs": [
         "Летние школы",
@@ -11226,6 +11465,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-121",
+      "displayName": "Подкопаев Евгений",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:07",
       "programs": [
         "Летние школы",
@@ -11324,6 +11565,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-122",
+      "displayName": "Свиридов Роман",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:03",
       "programs": [
         "Программы Академии «Меганом»",
@@ -11413,6 +11656,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-123",
+      "displayName": "Божко Сергей",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 13:00",
       "programs": [
         "Программы Академии «Меганом»"
@@ -11501,6 +11746,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-124",
+      "displayName": "Михеева Ксения",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:57",
       "programs": [
         "Программы Академии «Меганом»"
@@ -11591,6 +11838,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-125",
+      "displayName": "Мария Малышева",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:56",
       "programs": [
         "Программы Академии «Меганом»"
@@ -11684,6 +11933,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-126",
+      "displayName": "Обезличенный кейс T-126",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 12:54",
       "programs": [
         "Летние школы",
@@ -11775,6 +12026,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-127",
+      "displayName": "Клементьева Ксения",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:53",
       "programs": [
         "Летние школы",
@@ -11868,6 +12121,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-128",
+      "displayName": "Макиенко Ольга",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:52",
       "programs": [
         "Летние школы",
@@ -11967,6 +12222,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-129",
+      "displayName": "Дроздова Александра",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:52",
       "programs": [
         "Летние школы"
@@ -12052,6 +12309,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-130",
+      "displayName": "Колесников Виктор",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:51",
       "programs": [
         "Летние школы",
@@ -12144,6 +12403,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-131",
+      "displayName": "Обезличенный кейс T-131",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 12:50",
       "programs": [
         "Летние школы",
@@ -12223,6 +12484,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-132",
+      "displayName": "Султыгов Ахмед",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:49",
       "programs": [
         "Летние школы",
@@ -12330,6 +12593,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-133",
+      "displayName": "Солонин Андрей",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:49",
       "programs": [
         "Летние школы",
@@ -12432,6 +12697,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-134",
+      "displayName": "Солончева Алина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:49",
       "programs": [
         "Летние школы",
@@ -12543,6 +12810,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-135",
+      "displayName": "Панова - Малевинская Анастасия",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:48",
       "programs": [
         "Программы Академии «Меганом»"
@@ -12631,6 +12900,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-136",
+      "displayName": "Дамбаев Майдар",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:48",
       "programs": [
         "Программы Академии «Меганом»"
@@ -12709,6 +12980,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-137",
+      "displayName": "Обезличенный кейс T-137",
+      "nameAllowedInInterface": false,
       "responseDate": "2026.08.19 12:48",
       "programs": [
         "Программы Академии «Меганом»",
@@ -12792,6 +13065,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-138",
+      "displayName": "Ювати Елизавета",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:48",
       "programs": [
         "Летние школы",
@@ -12885,6 +13160,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-139",
+      "displayName": "Красавина Любовь",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:46",
       "programs": [
         "Программы Академии «Меганом»"
@@ -12977,6 +13254,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-140",
+      "displayName": "Щенникова Елизавета",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:39",
       "programs": [
         "Летние школы"
@@ -13068,6 +13347,8 @@ window.TAVRIDA_DASHBOARD_DATA = {
     },
     {
       "id": "T-141",
+      "displayName": "Казанцева Алина",
+      "nameAllowedInInterface": true,
       "responseDate": "2026.08.19 12:38",
       "programs": [
         "Летние школы"

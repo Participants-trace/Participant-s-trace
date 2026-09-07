@@ -370,6 +370,9 @@ def main() -> None:
         interview = cell(row, 110)
         trajectories = classify(all_case_text, time_to_result)
         missing_tags = classify_missing(missing_text)
+        record_id = f"T-{index:03d}"
+        participant_name = redact(cell(row, 16), 120)
+        display_name = participant_name if flags["nameAllowed"] and participant_name else f"Обезличенный кейс {record_id}"
 
         if "no-clear-result" in trajectories:
             primary_trajectory = "no-clear-result"
@@ -395,7 +398,9 @@ def main() -> None:
             quality_score += 8
 
         record = {
-            "id": f"T-{index:03d}",
+            "id": record_id,
+            "displayName": display_name,
+            "nameAllowedInInterface": bool(flags["nameAllowed"] and participant_name),
             "responseDate": cell(row, 2),
             "programs": programs,
             "programDetails": [redact(text, 180) for text in details],
@@ -458,7 +463,6 @@ def main() -> None:
                 "to": max(response_dates).strftime("%Y-%m-%d") if response_dates else None,
             },
             "generatedAt": datetime.now().strftime("%Y-%m-%d %H:%M"),
-            "privacyNote": "В интерфейс не включены email, телефоны, IP, UA и исходные ссылки на загруженные документы.",
         },
         "dictionary": {
             "programs": [header_options[col - 1] for col in program_cols],
@@ -498,6 +502,7 @@ def main() -> None:
             file,
             fieldnames=[
                 "id",
+                "displayName",
                 "programs",
                 "latestYear",
                 "directions",
@@ -520,6 +525,7 @@ def main() -> None:
             writer.writerow(
                 {
                     "id": record["id"],
+                    "displayName": record["displayName"],
                     "programs": "; ".join(record["programs"]),
                     "latestYear": record["latestYear"] or "",
                     "directions": "; ".join(record["directions"]),

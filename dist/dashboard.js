@@ -99,6 +99,7 @@
     if (!state.search) return true;
     const haystack = [
       record.id,
+      record.displayName,
       record.region,
       record.professionalLevel,
       record.primaryActivity,
@@ -406,7 +407,7 @@
                 <header>
                   <div>
                     <p class="eyebrow">${escapeHtml(trajectory)}</p>
-                    <h3>${escapeHtml(record.id)}</h3>
+                    <h3>${escapeHtml(record.displayName || record.id)}</h3>
                   </div>
                   <span class="case-score">${escapeHtml(impact)}</span>
                 </header>
@@ -477,65 +478,6 @@
     $("#filterStatus").textContent = active.length
       ? `${numberFormat.format(list.length)} ответов после фильтрации: ${active.join("; ")}.`
       : `${numberFormat.format(list.length)} ответов, фильтры не применены.`;
-  }
-
-  function exportCases() {
-    const list = filteredRecords()
-      .filter(caseMatches)
-      .sort((a, b) => b.qualityScore - a.qualityScore);
-    const headers = [
-      "id",
-      "programs",
-      "latestYear",
-      "directions",
-      "region",
-      "professionalLevel",
-      "trajectory",
-      "attribution",
-      "timeToResult",
-      "impactIndex",
-      "evidenceCount",
-      "interviewConsent",
-      "casePermission",
-      "caseSummary",
-      "skillsSummary",
-      "futureLink",
-    ];
-    const rows = list.map((record) => ({
-      id: record.id,
-      programs: record.programs.join("; "),
-      latestYear: record.latestYear || "",
-      directions: record.directions.join("; "),
-      region: record.region,
-      professionalLevel: record.professionalLevel,
-      trajectory: trajectoryMap.get(record.primaryTrajectory)?.label || record.primaryTrajectory,
-      attribution: record.attribution,
-      timeToResult: record.timeToResult,
-      impactIndex: record.impactIndex || "",
-      evidenceCount: record.evidenceCount,
-      interviewConsent: record.interviewConsent,
-      casePermission: record.casePermission,
-      caseSummary: record.caseSummary,
-      skillsSummary: record.skillsSummary,
-      futureLink: record.futureLink,
-    }));
-    const csv = [
-      headers.join(","),
-      ...rows.map((row) =>
-        headers
-          .map((header) => `"${String(row[header] ?? "").replace(/"/g, "\"\"")}"`)
-          .join(","),
-      ),
-    ].join("\n");
-    const blob = new Blob([`\uFEFF${csv}`], { type: "text/csv;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "tavrida-cases-filtered.csv";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
   }
 
   function render() {
@@ -631,13 +573,9 @@
       render();
     });
 
-    $("#exportCases").addEventListener("click", exportCases);
   }
 
   function setupStaticText() {
-    $("#sourceLine").textContent =
-      "Количественный слой, качественные траектории и база кейсов по выгрузке Anketolog. " +
-      source.meta.privacyNote;
     $("#responseBadge").textContent = `${source.meta.responses} ответ`;
     $("#periodBadge").textContent = `${source.meta.responsePeriod.from} — ${source.meta.responsePeriod.to}`;
   }
