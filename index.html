@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>След участника — Таврида.АРТ</title>
+    <meta
+      name="description"
+      content="Интерактивный дашборд влияния программ Таврида.АРТ на профессиональную и творческую траекторию участников."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/data.js" defer></script>
+    <script src="dashboard.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">ТА</div>
+        <div>
+          <p class="eyebrow">Аналитический дашборд</p>
+          <h1>След участника</h1>
+        </div>
+      </div>
+      <nav class="page-nav" aria-label="Разделы дашборда">
+        <a href="#impact">Индекс</a>
+        <a href="#trajectories">Траектории</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#segments">Сегменты</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="working-surface" aria-labelledby="dashboard-title">
+        <div class="title-stack">
+          <div>
+            <p class="eyebrow">Таврида.АРТ</p>
+            <h2 id="dashboard-title">Как изменилась карьера после участия в программах</h2>
+            <p class="subtitle" id="sourceLine"></p>
+          </div>
+          <div class="source-badges" aria-label="Сводка источника">
+            <span id="responseBadge"></span>
+            <span id="periodBadge"></span>
+          </div>
+        </div>
+
+        <form class="filters" id="filters" aria-label="Фильтры дашборда">
+          <label>
+            Программа
+            <select id="programFilter"></select>
+          </label>
+          <label>
+            Направление
+            <select id="directionFilter"></select>
+          </label>
+          <label>
+            Регион
+            <select id="regionFilter"></select>
+          </label>
+          <label>
+            Уровень
+            <select id="levelFilter"></select>
+          </label>
+          <label>
+            Траектория
+            <select id="trajectoryFilter"></select>
+          </label>
+          <label>
+            Год участия
+            <select id="yearFilter"></select>
+          </label>
+          <label>
+            Связь с программой
+            <select id="attributionFilter">
+              <option value="all">Все ответы</option>
+              <option value="positive">Есть связь, включая частичную</option>
+              <option value="strong">Сильная или полная связь</option>
+              <option value="weak">Слабая связь или нет связи</option>
+            </select>
+          </label>
+          <label>
+            Подтверждения
+            <select id="evidenceFilter">
+              <option value="all">Все кейсы</option>
+              <option value="with-evidence">Есть документы или внешние ссылки</option>
+              <option value="with-interview">Готовы к интервью</option>
+              <option value="public-materials">Можно использовать материалы</option>
+            </select>
+          </label>
+          <div class="filter-actions">
+            <button type="button" class="button secondary" id="resetFilters">
+              <span aria-hidden="true">↺</span>
+              Сбросить
+            </button>
+            <button type="button" class="button primary" id="exportCases">
+              <span aria-hidden="true">↓</span>
+              Экспорт кейсов CSV
+            </button>
+          </div>
+        </form>
+
+        <div class="filter-status" id="filterStatus" role="status"></div>
+
+        <div class="kpi-grid" id="kpiGrid" aria-label="Ключевые показатели"></div>
+      </section>
+
+      <section class="section-grid overview-grid" aria-label="Общая картина">
+        <article class="chart-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Самооценка влияния</p>
+              <h2>Связь успеха с программой</h2>
+            </div>
+            <div class="donut" id="attributionDonut" aria-hidden="true">
+              <span id="attributionDonutValue"></span>
+            </div>
+          </div>
+          <div class="stack-bars" id="attributionBars"></div>
+        </article>
+
+        <article class="chart-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Скорость результата</p>
+              <h2>Когда появился первый заметный результат</h2>
+            </div>
+          </div>
+          <div class="bar-list compact" id="speedBars"></div>
+        </article>
+
+        <article class="chart-panel wide">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Вывод по сегменту</p>
+              <h2>Что показывает выбранная группа</h2>
+            </div>
+          </div>
+          <p class="insight-text" id="segmentInsight"></p>
+        </article>
+      </section>
+
+      <section class="section" id="impact" aria-labelledby="impact-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Матрица 1–5</p>
+            <h2 id="impact-title">Индекс влияния программы</h2>
+          </div>
+          <p>
+            Средние оценки по аспектам, которые участники связывают с профессиональным и творческим ростом.
+          </p>
+        </div>
+        <div class="impact-layout">
+          <div class="bar-list" id="impactBars"></div>
+          <div class="method-note">
+            <h3>Как читать</h3>
+            <p>
+              Индекс считается как среднее по десяти аспектам влияния. Ответы «затрудняюсь ответить» не входят в среднюю
+              оценку, но учитываются в доле неопределенности.
+            </p>
+            <p>
+              Самая сильная зона обычно показывает механизм влияния программы, а самая слабая — точку для следующего
+              продукта сопровождения.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trajectories" aria-labelledby="trajectories-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Качественная аналитика</p>
+            <h2 id="trajectories-title">Типовые траектории успеха</h2>
+          </div>
+          <p>
+            Траектории выделены по открытым ответам. Один участник может попадать сразу в несколько траекторий.
+          </p>
+        </div>
+        <div class="trajectory-grid" id="trajectoryGrid"></div>
+      </section>
+
+      <section class="section-grid two-panels" aria-label="Факторы роста и запросы">
+        <article class="chart-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Механизмы влияния</p>
+              <h2>Что участники считают самым ценным</h2>
+            </div>
+          </div>
+          <div class="bar-list compact" id="factorBars"></div>
+        </article>
+        <article class="chart-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Следующий продукт</p>
+              <h2>Какая поддержка нужна сейчас</h2>
+            </div>
+          </div>
+          <div class="bar-list compact" id="supportBars"></div>
+        </article>
+      </section>
+
+      <section class="section" id="cases" aria-labelledby="cases-title">
+        <div class="section-head cases-head">
+          <div>
+            <p class="eyebrow">База качественных кейсов</p>
+            <h2 id="cases-title">Истории результата</h2>
+          </div>
+          <label class="search-field">
+            Поиск по кейсам
+            <input id="caseSearch" type="search" placeholder="проект, грант, регион, направление" />
+          </label>
+        </div>
+        <div class="case-toolbar">
+          <p id="casesMeta"></p>
+          <p class="privacy-line">Контакты, IP, UA и приватные ссылки на документы не выводятся.</p>
+        </div>
+        <div class="case-grid" id="caseGrid"></div>
+        <div class="center-action">
+          <button type="button" class="button secondary" id="showMoreCases">Показать еще</button>
+        </div>
+      </section>
+
+      <section class="section" id="segments" aria-labelledby="segments-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Сегментация</p>
+            <h2 id="segments-title">Где эффект проявляется сильнее</h2>
+          </div>
+          <p>Быстрый срез по программам, направлениям, регионам, уровню и годам участия.</p>
+        </div>
+        <div class="segment-grid">
+          <article class="mini-panel">
+            <h3>Программы</h3>
+            <div class="bar-list compact" id="segmentPrograms"></div>
+          </article>
+          <article class="mini-panel">
+            <h3>Направления</h3>
+            <div class="bar-list compact" id="segmentDirections"></div>
+          </article>
+          <article class="mini-panel">
+            <h3>Регионы</h3>
+            <div class="bar-list compact" id="segmentRegions"></div>
+          </article>
+          <article class="mini-panel">
+            <h3>Уровень и годы</h3>
+            <div class="split-mini">
+              <div class="bar-list compact" id="segmentLevels"></div>
+              <div class="bar-list compact" id="segmentYears"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section final-section" aria-labelledby="method-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Методика</p>
+            <h2 id="method-title">Что уже можно доказывать данными</h2>
+          </div>
+        </div>
+        <div class="method-grid">
+          <article>
+            <h3>Сильная сторона текущей анкеты</h3>
+            <p>
+              Данные фиксируют самооценку влияния, сроки первого результата, конкретные достижения, примененные навыки,
+              подтверждающие материалы, разрешение на использование кейса и готовность к интервью.
+            </p>
+          </article>
+          <article>
+            <h3>Ограничение before/after</h3>
+            <p>
+              В выгрузке нет строгого состояния «до программы». Для точного сравнения нужно связать дашборд с заявками
+              или добавить базовую анкету до участия.
+            </p>
+          </article>
+          <article>
+            <h3>Следующий шаг</h3>
+            <p>
+              Открытые ответы стоит доразметить вручную или LLM-классификацией: тип результата, уровень доказательности,
+              цитата, риск публичного использования и приоритет для интервью.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
