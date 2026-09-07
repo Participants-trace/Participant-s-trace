@@ -187,6 +187,15 @@ NO_RESULT_MARKERS = [
 ]
 
 
+EVIDENCE_SOURCES = [
+    (63, "1-е достижение"),
+    (64, "2-е достижение"),
+    (65, "3-е достижение"),
+    (66, "Загруженный файл"),
+    (68, "Публикации, выставки, выступления или победы"),
+]
+
+
 MISSING_RULES = [
     {
         "id": "practice",
@@ -241,8 +250,35 @@ def urls_from(*texts: str) -> list[str]:
     urls: list[str] = []
     for text in texts:
         for raw in URL_RE.findall(text):
-            urls.append(raw.rstrip(").,;"))
+            urls.append(raw.rstrip(").,;:"))
     return urls
+
+
+def compact_host(url: str) -> str:
+    host = urlparse(url).netloc.lower()
+    return host.removeprefix("www.") or "ссылка"
+
+
+def collect_evidence(row: list) -> list[dict]:
+    items = []
+    seen = set()
+    for col, source in EVIDENCE_SOURCES:
+        for url in urls_from(cell(row, col)):
+            key = url.rstrip("/")
+            if key in seen:
+                continue
+            seen.add(key)
+            host = compact_host(url)
+            items.append(
+                {
+                    "label": f"Материал {len(items) + 1}",
+                    "source": source,
+                    "kind": "file" if col == 66 or host == "ankt.cc" else "external",
+                    "host": host,
+                    "url": url,
+                }
+            )
+    return items
 
 
 def selected_options(row: list, cols: list[int], options: list[str]) -> list[str]:
@@ -359,13 +395,21 @@ def main() -> None:
         except ValueError:
             pass
 
-        evidence_urls = urls_from(cell(row, 63), cell(row, 64), cell(row, 65), cell(row, 66), cell(row, 68))
+        evidence_items = collect_evidence(row)
+        evidence_urls = [item["url"] for item in evidence_items]
         evidence_hosts = Counter(urlparse(url).netloc for url in evidence_urls)
         private_evidence_count = sum(count for host, count in evidence_hosts.items() if host == "ankt.cc")
         external_evidence_count = len(evidence_urls) - private_evidence_count
 
         permission = cell(row, 111)
         flags = permission_flags(permission)
+        visible_evidence_items = [
+            {
+                **item,
+                "restricted": not flags["materialsAllowed"],
+            }
+            for item in evidence_items
+        ]
         interview = cell(row, 110)
         trajectories = classify(all_case_text, time_to_result)
         missing_tags = classify_missing(missing_text)
@@ -438,6 +482,9 @@ def main() -> None:
             "trajectories": trajectories,
             "primaryTrajectory": primary_trajectory,
             "evidenceCount": len(evidence_urls),
+            "evidenceItems": visible_evidence_items,
+            "visibleEvidenceCount": len(visible_evidence_items),
+            "restrictedEvidenceCount": sum(1 for item in visible_evidence_items if item["restricted"]),
             "privateEvidenceCount": private_evidence_count,
             "externalEvidenceCount": external_evidence_count,
             "evidenceHosts": dict(evidence_hosts),

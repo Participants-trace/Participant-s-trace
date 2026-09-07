@@ -8,7 +8,7 @@ window.TAVRIDA_DASHBOARD_DATA = {
       "from": "2026-08-19",
       "to": "2026-09-05"
     },
-    "generatedAt": "2026-09-07 04:33"
+    "generatedAt": "2026-09-07 04:50"
   },
   "dictionary": {
     "programs": [
@@ -389,6 +389,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -489,6 +492,50 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 5,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/JpOfNV",
+          "restricted": true
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/0MxqPq",
+          "restricted": true
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/abwSG1",
+          "restricted": true
+        },
+        {
+          "label": "Материал 4",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/zah8Fl",
+          "restricted": true
+        },
+        {
+          "label": "Материал 5",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/j9Ocia",
+          "restricted": true
+        }
+      ],
+      "visibleEvidenceCount": 5,
+      "restrictedEvidenceCount": 5,
       "privateEvidenceCount": 5,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -588,6 +635,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -684,6 +734,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/xFjtLM",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -778,6 +840,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -873,6 +938,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -962,6 +1030,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/uQqzZv",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -1060,6 +1140,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -1150,6 +1233,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -1247,6 +1333,34 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 3,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/NU5lFJ",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/et0jiZ",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/ByoIGn",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 3,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 3,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -1352,6 +1466,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -1440,6 +1557,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -1533,6 +1653,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -1629,6 +1752,42 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 4,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/Blc0ZP",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/KcWV8L",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/bWnaRh",
+          "restricted": false
+        },
+        {
+          "label": "Материал 4",
+          "source": "Публикации, выставки, выступления или победы",
+          "kind": "external",
+          "host": "music.yandex.ru",
+          "url": "https://music.yandex.ru/artist/26322137",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 4,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 3,
       "externalEvidenceCount": 1,
       "evidenceHosts": {
@@ -1740,6 +1899,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/8seOGs",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -1831,6 +2002,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -1939,6 +2113,90 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 10,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/rpux6V",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/1JaO3K",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/MWu6Nd",
+          "restricted": false
+        },
+        {
+          "label": "Материал 4",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/X4bIiL",
+          "restricted": false
+        },
+        {
+          "label": "Материал 5",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/8GSIWx",
+          "restricted": false
+        },
+        {
+          "label": "Материал 6",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/QWKPqF",
+          "restricted": false
+        },
+        {
+          "label": "Материал 7",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/i1ByHc",
+          "restricted": false
+        },
+        {
+          "label": "Материал 8",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/fMHBnj",
+          "restricted": false
+        },
+        {
+          "label": "Материал 9",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/FlG6Mr",
+          "restricted": false
+        },
+        {
+          "label": "Материал 10",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/4kRfqP",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 10,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 10,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -2043,6 +2301,66 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 7,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/p6rqdN",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/IkW3p2",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/GjQf9M",
+          "restricted": false
+        },
+        {
+          "label": "Материал 4",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/8Piq6J",
+          "restricted": false
+        },
+        {
+          "label": "Материал 5",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/1mYcYg",
+          "restricted": false
+        },
+        {
+          "label": "Материал 6",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/AN1EoD",
+          "restricted": false
+        },
+        {
+          "label": "Материал 7",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/OJ4egS",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 7,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 7,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -2134,6 +2452,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -2240,6 +2561,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/07ykfv",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -2340,6 +2673,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -2439,6 +2775,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -2530,6 +2869,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -2630,6 +2972,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -2733,6 +3078,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "network",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -2830,6 +3178,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -2927,6 +3278,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3018,6 +3372,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3107,6 +3464,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3197,6 +3557,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3286,6 +3649,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3386,6 +3752,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3483,6 +3852,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3574,6 +3946,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/zOhdDG",
+          "restricted": true
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 1,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -3661,6 +4045,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3754,6 +4141,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3846,6 +4236,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -3938,6 +4331,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -4043,6 +4439,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "1-е достижение",
+          "kind": "external",
+          "host": "youtube.com",
+          "url": "https://www.youtube.com/@Славянка_на_душе",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 1,
       "evidenceHosts": {
@@ -4140,6 +4548,34 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 3,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/saifEh",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/u1rM7H",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/S49GaK",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 3,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 3,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -4245,6 +4681,34 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 3,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/9HUOdf",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/1ikOwL",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/EeB5QN",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 3,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 3,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -4331,6 +4795,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -4421,6 +4888,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -4513,6 +4983,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -4614,6 +5087,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -4705,6 +5181,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -4803,6 +5282,26 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 2,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/Bgj92C",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/2Qvvoq",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 2,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 2,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -4904,6 +5403,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -4998,6 +5500,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -5086,6 +5591,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -5183,6 +5691,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -5271,6 +5782,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -5360,6 +5874,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -5466,6 +5983,34 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 3,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/Azt5TG",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/SMFaGB",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/lMIH8K",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 3,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 3,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -5574,6 +6119,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -5681,6 +6229,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -5778,6 +6329,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/v11E50",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -5888,6 +6451,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/iRHeYq",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -5979,6 +6554,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "network",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6065,6 +6643,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6175,6 +6756,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6274,6 +6858,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6370,6 +6957,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6471,6 +7061,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6570,6 +7163,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6664,6 +7260,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6763,6 +7362,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6868,6 +7470,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -6959,6 +7564,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7049,6 +7657,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7139,6 +7750,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7234,6 +7848,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7333,6 +7950,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7434,6 +8054,34 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 3,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "1-е достижение",
+          "kind": "external",
+          "host": "vk.ru",
+          "url": "https://vk.ru/pinitiate",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/YSMYlr",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/ycdtZx",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 3,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 2,
       "externalEvidenceCount": 1,
       "evidenceHosts": {
@@ -7532,6 +8180,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/op4aFA",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -7620,6 +8280,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7717,6 +8380,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7824,6 +8490,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -7931,6 +8600,34 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 3,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/rZXVVx",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/l6dqR2",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/lTD0vL",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 3,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 3,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -8030,6 +8727,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -8129,6 +8829,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -8225,6 +8928,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/WWBtmt",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -8312,6 +9027,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "network",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -8407,6 +9125,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -8501,6 +9222,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -8593,6 +9317,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -8694,6 +9421,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/GdHGb4",
+          "restricted": true
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 1,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -8807,6 +9546,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/DsfDyu",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -8895,6 +9646,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -8989,6 +9743,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/XT9FuX",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -9075,6 +9841,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -9166,6 +9935,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -9250,6 +10022,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/3Yz4ax",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -9337,6 +10121,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -9432,6 +10219,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/2NHCcM",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -9537,6 +10336,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -9624,6 +10426,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -9720,6 +10525,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -9824,6 +10632,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -9923,6 +10734,26 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 2,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/WoRG64",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/o9gMdO",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 2,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 2,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -10025,6 +10856,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10119,6 +10953,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10216,6 +11053,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10307,6 +11147,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10400,6 +11243,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10488,6 +11334,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10591,6 +11440,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/Gbbiaf",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -10696,6 +11557,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/xsAcOE",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -10810,6 +11683,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10909,6 +11785,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -10996,6 +11875,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -11098,6 +11980,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -11182,6 +12067,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -11269,6 +12157,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "network",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -11356,6 +12247,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -11455,6 +12349,26 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 2,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/vg8pjJ",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/QskWQs",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 2,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 2,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -11566,6 +12480,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/cifld8",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -11661,6 +12587,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -11760,6 +12689,50 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 5,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/fMOSqf",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/OLZYPj",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/BLp0xz",
+          "restricted": false
+        },
+        {
+          "label": "Материал 4",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/xvp5ZI",
+          "restricted": false
+        },
+        {
+          "label": "Материал 5",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/0qBgPi",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 5,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 5,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -11863,6 +12836,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/CjoJDH",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -11969,6 +12954,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12065,6 +13053,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12158,6 +13149,82 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "visibility",
       "evidenceCount": 9,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/43YgVa",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/udP1Ld",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/PjaY4g",
+          "restricted": false
+        },
+        {
+          "label": "Материал 4",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/WJc3Zu",
+          "restricted": false
+        },
+        {
+          "label": "Материал 5",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/Ljs35T",
+          "restricted": false
+        },
+        {
+          "label": "Материал 6",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/ZPv5ln",
+          "restricted": false
+        },
+        {
+          "label": "Материал 7",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/Z8his8",
+          "restricted": false
+        },
+        {
+          "label": "Материал 8",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/1Xp77p",
+          "restricted": false
+        },
+        {
+          "label": "Материал 9",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/hl2B7Q",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 9,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 9,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -12255,6 +13322,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12354,6 +13424,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12448,6 +13521,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12545,6 +13621,66 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 7,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/749MJV",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/ekQTxc",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/ND6oSA",
+          "restricted": false
+        },
+        {
+          "label": "Материал 4",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/REVWX1",
+          "restricted": false
+        },
+        {
+          "label": "Материал 5",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/J7LOP2",
+          "restricted": false
+        },
+        {
+          "label": "Материал 6",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/9ccuYq",
+          "restricted": false
+        },
+        {
+          "label": "Материал 7",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/DPHIav",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 7,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 7,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -12653,6 +13789,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12743,6 +13882,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12842,6 +13984,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -12924,6 +14069,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "development",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13037,6 +14185,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13146,6 +14297,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13259,6 +14413,50 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "grant",
       "evidenceCount": 5,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "1-е достижение",
+          "kind": "external",
+          "host": "clck.ru",
+          "url": "https://clck.ru/3PNAMy",
+          "restricted": false
+        },
+        {
+          "label": "Материал 2",
+          "source": "3-е достижение",
+          "kind": "external",
+          "host": "oskol.city",
+          "url": "https://oskol.city/news/culture/102848/",
+          "restricted": false
+        },
+        {
+          "label": "Материал 3",
+          "source": "3-е достижение",
+          "kind": "external",
+          "host": "disk.yandex.ru",
+          "url": "https://disk.yandex.ru/i/2LmhrgSYCrMcGA",
+          "restricted": false
+        },
+        {
+          "label": "Материал 4",
+          "source": "3-е достижение",
+          "kind": "external",
+          "host": "clck.ru",
+          "url": "https://clck.ru/3Txr9a",
+          "restricted": false
+        },
+        {
+          "label": "Материал 5",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/R3B8ae",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 5,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 4,
       "evidenceHosts": {
@@ -13357,6 +14555,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13440,6 +14641,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "development",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13528,6 +14732,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13626,6 +14833,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "project",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13723,6 +14933,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "no-clear-result",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},
@@ -13817,6 +15030,18 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "expert",
       "evidenceCount": 1,
+      "evidenceItems": [
+        {
+          "label": "Материал 1",
+          "source": "Загруженный файл",
+          "kind": "file",
+          "host": "ankt.cc",
+          "url": "https://ankt.cc/DB3Qis",
+          "restricted": false
+        }
+      ],
+      "visibleEvidenceCount": 1,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 1,
       "externalEvidenceCount": 0,
       "evidenceHosts": {
@@ -13914,6 +15139,9 @@ window.TAVRIDA_DASHBOARD_DATA = {
       ],
       "primaryTrajectory": "career",
       "evidenceCount": 0,
+      "evidenceItems": [],
+      "visibleEvidenceCount": 0,
+      "restrictedEvidenceCount": 0,
       "privateEvidenceCount": 0,
       "externalEvidenceCount": 0,
       "evidenceHosts": {},

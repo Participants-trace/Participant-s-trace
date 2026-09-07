@@ -113,6 +113,41 @@
     return profileCard(title, text ? `<p>${escapeHtml(text)}</p>` : "<p>Нет данных в анкете.</p>");
   }
 
+  function materialsCard(record) {
+    const items = record.evidenceItems || [];
+    if (!record.evidenceCount) {
+      return profileCard("Материалы и подтверждения", "<p>В анкете нет приложенных файлов или ссылок.</p>");
+    }
+    if (!items.length) {
+      return profileCard("Материалы и подтверждения", "<p>Подтверждения есть в анкете, но ссылки не удалось извлечь.</p>");
+    }
+
+    const links = items
+      .map((item) => {
+        const kind = item.kind === "file" ? "Файл" : "Ссылка";
+        return `
+          <div class="material-item">
+            <div class="material-copy">
+              <strong>${escapeHtml(item.label || "Материал")}</strong>
+              <div class="material-meta">
+                <span>${escapeHtml(kind)}</span>
+                <span>${escapeHtml(item.source || "Источник не указан")}</span>
+                <span>${escapeHtml(item.host || "ссылка")}</span>
+                ${item.restricted ? "<span>только внутр. проверка</span>" : ""}
+              </div>
+            </div>
+            <a class="material-action" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">Открыть</a>
+          </div>
+        `;
+      })
+      .join("");
+
+    const hiddenNote = record.restrictedEvidenceCount
+      ? `<p class="material-note">${escapeHtml(numberFormat.format(record.restrictedEvidenceCount))} материал(ов) отмечено ограничением по разрешению участника.</p>`
+      : "";
+    return profileCard("Материалы и подтверждения", `<div class="material-list">${links}</div>${hiddenNote}`);
+  }
+
   function hasSearch(record) {
     if (!state.search) return true;
     const haystack = [
@@ -126,6 +161,7 @@
       record.skillsSummary,
       record.futureLink,
       record.missingSummary,
+      (record.evidenceItems || []).map((item) => `${item.label} ${item.source} ${item.host}`).join(" "),
       record.directions.join(" "),
       record.programs.join(" "),
       record.trajectories.map((tag) => trajectoryMap.get(tag)?.label || tag).join(" "),
@@ -441,6 +477,7 @@
       permissionText(record),
       record.interviewConsent === "Да" ? "Готов к интервью" : "Интервью не подтверждено",
       record.evidenceCount ? `${record.evidenceCount} подтверждений` : "Подтверждений нет",
+      record.visibleEvidenceCount ? `${record.visibleEvidenceCount} материалов можно открыть` : "",
     ];
 
     $("#profileBody").innerHTML = `
@@ -472,6 +509,7 @@
       <div class="profile-layout">
         <div class="profile-main">
           ${profileCard("Достижения", listItems(record.achievementItems && record.achievementItems.length ? record.achievementItems : [record.caseSummary].filter(Boolean)))}
+          ${materialsCard(record)}
           ${textCard("Примененные навыки", record.skillsSummary)}
           ${textCard("Публикации, выставки, выступления или победы", record.publicationsSummary)}
           ${textCard("Дальнейшая связь с Таврида.АРТ", record.futureLink)}
