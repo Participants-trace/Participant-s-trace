@@ -351,6 +351,99 @@ input[type="search"]:focus-visible,
   grid-column: 1 / -1;
 }
 
+.survey-panel {
+  grid-column: 1 / -1;
+}
+
+.survey-question {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.question-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 32px;
+  padding: 0 12px;
+  background: #12a538;
+  color: #ffffff;
+  font-weight: 850;
+  line-height: 1;
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%);
+}
+
+.survey-question h2 {
+  max-width: 1160px;
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.2;
+}
+
+.survey-question h2 span {
+  color: var(--muted);
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.survey-question p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.survey-table-wrap {
+  overflow-x: auto;
+  background: #ffffff;
+}
+
+.survey-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+}
+
+.survey-table th,
+.survey-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.survey-table th {
+  color: #3f4247;
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.survey-table th:nth-child(2),
+.survey-table th:nth-child(3),
+.survey-table td:nth-child(2),
+.survey-table td:nth-child(3) {
+  width: 190px;
+  text-align: center;
+}
+
+.survey-table td:first-child {
+  color: var(--option-color, #18ad3c);
+  font-size: 18px;
+}
+
+.survey-table td:nth-child(2),
+.survey-table td:nth-child(3) {
+  color: #3f4247;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.survey-table tr:last-child td {
+  border-bottom: 0;
+}
+
 .chart-panel h2,
 .section h2 {
   font-size: clamp(22px, 3vw, 32px);
@@ -759,6 +852,16 @@ input[type="search"]:focus-visible,
   .donut {
     width: 92px;
     height: 92px;
+  }
+
+  .survey-question {
+    grid-template-columns: 1fr;
+  }
+
+  .survey-question h2 span {
+    display: block;
+    margin-top: 4px;
+    font-size: 16px;
   }
 }
 

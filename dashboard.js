@@ -25,11 +25,31 @@
   };
 
   const attributionLabels = [
-    { id: "full", label: "Полная связь", color: "#0f766e" },
-    { id: "strong", label: "Сильная связь", color: "#159a8f" },
-    { id: "partial", label: "Частичная связь", color: "#2e69c9" },
-    { id: "weak", label: "Скорее не связана", color: "#d99416" },
-    { id: "none", label: "Не связана", color: "#d94b45" },
+    {
+      id: "full",
+      label: "Полностью связан — без «Тавриды» этого не произошло бы",
+      color: "#18ad3c",
+    },
+    {
+      id: "strong",
+      label: "В значительной степени связан — «Таврида» стала ключевым толчком",
+      color: "#18ad3c",
+    },
+    {
+      id: "partial",
+      label: "Частично связан — был один из нескольких факторов",
+      color: "#18ad3c",
+    },
+    {
+      id: "weak",
+      label: "Скорее не связан — успех определили другие обстоятельства",
+      color: "#18ad3c",
+    },
+    {
+      id: "none",
+      label: "Не связан совсем",
+      color: "#18ad3c",
+    },
   ];
 
   const timeOrder = [
@@ -58,6 +78,11 @@
   function percent(part, total) {
     if (!total) return "0%";
     return percentFormat.format(part / total);
+  }
+
+  function precisePercent(part, total) {
+    if (!total) return "0,00%";
+    return `${decimalFormat.format((part / total) * 100)}%`;
   }
 
   function average(values) {
@@ -206,29 +231,21 @@
     const total = list.length;
     const grouped = new Map(attributionLabels.map((item) => [item.id, 0]));
     list.forEach((record) => grouped.set(record.attributionGroup, (grouped.get(record.attributionGroup) || 0) + 1));
-
-    const strongFull = (grouped.get("full") || 0) + (grouped.get("strong") || 0);
-    const partial = grouped.get("partial") || 0;
-    const weak = grouped.get("weak") || 0;
-    const no = grouped.get("none") || 0;
-    const positive = strongFull + partial;
-
-    const a = total ? (strongFull / total) * 100 : 0;
-    const b = total ? (partial / total) * 100 : 0;
-    const c = total ? (weak / total) * 100 : 0;
-    $("#attributionDonut").style.setProperty("--a", `${a}%`);
-    $("#attributionDonut").style.setProperty("--b", `${b}%`);
-    $("#attributionDonut").style.setProperty("--c", `${c}%`);
-    $("#attributionDonut").style.setProperty("--d", `${total ? (no / total) * 100 : 0}%`);
-    $("#attributionDonutValue").textContent = percent(positive, total);
-
-    const bars = [
-      { label: "Сильная или полная связь", count: strongFull, color: "#0f766e" },
-      { label: "Частичная связь", count: partial, color: "#2e69c9" },
-      { label: "Слабая связь", count: weak, color: "#d99416" },
-      { label: "Нет связи", count: no, color: "#d94b45" },
-    ];
-    renderBarList($("#attributionBars"), bars, total);
+    $("#attributionMeta").textContent =
+      `Ответов: ${numberFormat.format(total)} (100%), затруднились ответить: 0 (0%), ` +
+      `пропусков: 0 (0%), показов: ${numberFormat.format(total)} (100%).`;
+    $("#attributionTable").innerHTML = attributionLabels
+      .map((item) => {
+        const count = grouped.get(item.id) || 0;
+        return `
+          <tr>
+            <td style="--option-color:${item.color};">${escapeHtml(item.label)}</td>
+            <td>${numberFormat.format(count)}</td>
+            <td>${precisePercent(count, total)}</td>
+          </tr>
+        `;
+      })
+      .join("");
   }
 
   function renderSpeed(list) {

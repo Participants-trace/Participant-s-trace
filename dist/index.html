@@ -99,17 +99,30 @@
       </section>
 
       <section class="section-grid overview-grid" aria-label="Общая картина">
-        <article class="chart-panel">
-          <div class="panel-head">
+        <article class="chart-panel survey-panel">
+          <div class="survey-question">
+            <span class="question-number">15</span>
             <div>
-              <p class="eyebrow">Самооценка влияния</p>
-              <h2>Связь успеха с программой</h2>
-            </div>
-            <div class="donut" id="attributionDonut" aria-hidden="true">
-              <span id="attributionDonutValue"></span>
+              <h2>
+                Связываете ли Вы свой текущий профессиональный и творческий успех непосредственно с участием в
+                программах «Таврида.Арт»?
+                <span>Одиночный выбор</span>
+              </h2>
+              <p id="attributionMeta"></p>
             </div>
           </div>
-          <div class="stack-bars" id="attributionBars"></div>
+          <div class="survey-table-wrap">
+            <table class="survey-table">
+              <thead>
+                <tr>
+                  <th>Варианты</th>
+                  <th>Количество ответов</th>
+                  <th>Проценты</th>
+                </tr>
+              </thead>
+              <tbody id="attributionTable"></tbody>
+            </table>
+          </div>
         </article>
 
         <article class="chart-panel">
