@@ -25,34 +25,6 @@
     selectedProfileId: null,
   };
 
-  const attributionLabels = [
-    {
-      id: "full",
-      label: "Полностью связан — без «Тавриды» этого не произошло бы",
-      color: "#18ad3c",
-    },
-    {
-      id: "strong",
-      label: "В значительной степени связан — «Таврида» стала ключевым толчком",
-      color: "#18ad3c",
-    },
-    {
-      id: "partial",
-      label: "Частично связан — был один из нескольких факторов",
-      color: "#18ad3c",
-    },
-    {
-      id: "weak",
-      label: "Скорее не связан — успех определили другие обстоятельства",
-      color: "#18ad3c",
-    },
-    {
-      id: "none",
-      label: "Не связан совсем",
-      color: "#18ad3c",
-    },
-  ];
-
   const timeOrder = [
     "До 3 месяцев включительно",
     "4–6 месяцев",
@@ -79,11 +51,6 @@
   function percent(part, total) {
     if (!total) return "0%";
     return percentFormat.format(part / total);
-  }
-
-  function precisePercent(part, total) {
-    if (!total) return "0,00%";
-    return `${decimalFormat.format((part / total) * 100)}%`;
   }
 
   function average(values) {
@@ -251,27 +218,6 @@
       kpiCard("Подтверждения", percent(evidence, total), `${evidence} участников приложили файлы или ссылки`, "amber"),
       kpiCard("Готовы к интервью", percent(interview, total), `${interview} участников можно звать на глубинное интервью`, "green"),
     ].join("");
-  }
-
-  function renderAttribution(list) {
-    const total = list.length;
-    const grouped = new Map(attributionLabels.map((item) => [item.id, 0]));
-    list.forEach((record) => grouped.set(record.attributionGroup, (grouped.get(record.attributionGroup) || 0) + 1));
-    $("#attributionMeta").textContent =
-      `Ответов: ${numberFormat.format(total)} (100%), затруднились ответить: 0 (0%), ` +
-      `пропусков: 0 (0%), показов: ${numberFormat.format(total)} (100%).`;
-    $("#attributionTable").innerHTML = attributionLabels
-      .map((item) => {
-        const count = grouped.get(item.id) || 0;
-        return `
-          <tr>
-            <td style="--option-color:${item.color};">${escapeHtml(item.label)}</td>
-            <td>${numberFormat.format(count)}</td>
-            <td>${precisePercent(count, total)}</td>
-          </tr>
-        `;
-      })
-      .join("");
   }
 
   function renderSpeed(list) {
@@ -615,7 +561,6 @@
     const list = filteredRecords();
     renderStatus(list);
     renderKpis(list);
-    renderAttribution(list);
     renderSpeed(list);
     renderInsight(list);
     renderImpact(list);
