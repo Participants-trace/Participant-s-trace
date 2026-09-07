@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import csv
 import json
 import re
 from collections import Counter
@@ -16,7 +15,6 @@ ROOT = Path(__file__).resolve().parents[2]
 SITE_ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "anketolog-report-2180102-survey-1052275-sled-uchastnika-VM1VdZ.xlsx"
 DATA_JS = SITE_ROOT / "assets" / "data.js"
-CASES_CSV = SITE_ROOT / "assets" / "cases.csv"
 
 
 URL_RE = re.compile(r"https?://[^\s\"<>]+")
@@ -343,7 +341,8 @@ def main() -> None:
         attribution_group, attribution_score = ATTRIBUTION_META.get(attribution, ("unknown", None))
         time_to_result = cell(row, 62)
 
-        achievement_parts = [cell(row, col) for col in [60, 63, 64, 65, 68] if cell(row, col)]
+        achievement_items = [cell(row, col) for col in [60, 63, 64, 65] if cell(row, col)]
+        achievement_parts = achievement_items + ([cell(row, 68)] if cell(row, 68) else [])
         achievement_text = " ".join(achievement_parts)
         skills_text = cell(row, 67)
         future_text = cell(row, 109)
@@ -383,6 +382,7 @@ def main() -> None:
         case_summary = redact(achievement_text or skills_text or future_text, 420)
         if not flags["caseAllowed"]:
             case_summary = ""
+            achievement_items = []
 
         quality_score = 0
         if attribution in STRONG_ATTRIBUTION:
@@ -430,6 +430,7 @@ def main() -> None:
             "supportNeeds": supports,
             "futureLink": redact(future_text, 280),
             "caseSummary": case_summary,
+            "achievementItems": [redact(text, 460) for text in achievement_items] if flags["caseAllowed"] else [],
             "skillsSummary": redact(skills_text, 240) if flags["caseAllowed"] else "",
             "publicationsSummary": redact(cell(row, 68), 220) if flags["caseAllowed"] else "",
             "missingSummary": redact(missing_text, 220),
@@ -497,55 +498,7 @@ def main() -> None:
         encoding="utf-8",
     )
 
-    with CASES_CSV.open("w", encoding="utf-8-sig", newline="") as file:
-        writer = csv.DictWriter(
-            file,
-            fieldnames=[
-                "id",
-                "displayName",
-                "programs",
-                "latestYear",
-                "directions",
-                "region",
-                "professionalLevel",
-                "primaryTrajectory",
-                "attribution",
-                "timeToResult",
-                "impactIndex",
-                "evidenceCount",
-                "interviewConsent",
-                "casePermission",
-                "caseSummary",
-                "skillsSummary",
-                "futureLink",
-            ],
-        )
-        writer.writeheader()
-        for record in sorted(case_rows, key=lambda item: item["qualityScore"], reverse=True):
-            writer.writerow(
-                {
-                    "id": record["id"],
-                    "displayName": record["displayName"],
-                    "programs": "; ".join(record["programs"]),
-                    "latestYear": record["latestYear"] or "",
-                    "directions": "; ".join(record["directions"]),
-                    "region": record["region"],
-                    "professionalLevel": record["professionalLevel"],
-                    "primaryTrajectory": record["primaryTrajectory"],
-                    "attribution": record["attribution"],
-                    "timeToResult": record["timeToResult"],
-                    "impactIndex": record["impactIndex"] or "",
-                    "evidenceCount": record["evidenceCount"],
-                    "interviewConsent": record["interviewConsent"],
-                    "casePermission": record["casePermission"],
-                    "caseSummary": record["caseSummary"],
-                    "skillsSummary": record["skillsSummary"],
-                    "futureLink": record["futureLink"],
-                }
-            )
-
     print(f"Wrote {DATA_JS.relative_to(SITE_ROOT)}")
-    print(f"Wrote {CASES_CSV.relative_to(SITE_ROOT)}")
     print(f"Records: {len(records)}; cases: {len(case_rows)}")
 
 

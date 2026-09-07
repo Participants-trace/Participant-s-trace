@@ -22,6 +22,7 @@
     evidence: "all",
     search: "",
     caseLimit: 12,
+    selectedProfileId: null,
   };
 
   const attributionLabels = [
@@ -118,6 +119,31 @@
   function compactLabel(label, size = 82) {
     if (!label) return "";
     return label.length > size ? `${label.slice(0, size - 1).trim()}…` : label;
+  }
+
+  function listItems(items) {
+    const clean = (items || []).filter(Boolean);
+    if (!clean.length) return "<p>Нет данных в анкете.</p>";
+    return `<ul>${clean.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  }
+
+  function chips(items) {
+    const clean = (items || []).filter(Boolean);
+    if (!clean.length) return "<p>Нет данных в анкете.</p>";
+    return `<div class="profile-chips">${clean.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>`;
+  }
+
+  function profileCard(title, content) {
+    return `
+      <section class="profile-card">
+        <h3>${escapeHtml(title)}</h3>
+        ${content}
+      </section>
+    `;
+  }
+
+  function textCard(title, text) {
+    return profileCard(title, text ? `<p>${escapeHtml(text)}</p>` : "<p>Нет данных в анкете.</p>");
   }
 
   function hasSearch(record) {
@@ -420,7 +446,7 @@
             const evidenceLabel =
               record.evidenceCount > 0 ? `${record.evidenceCount} подтвержд.` : "без файла";
             return `
-              <article class="case-card">
+              <article class="case-card" role="button" tabindex="0" data-profile-id="${escapeHtml(record.id)}" aria-label="Открыть профиль ${escapeHtml(record.displayName || record.id)}">
                 <header>
                   <div>
                     <p class="eyebrow">${escapeHtml(trajectory)}</p>
@@ -443,11 +469,99 @@
                   <span class="${record.materialsAllowed ? "good" : "warn"}">${escapeHtml(permissionText(record))}</span>
                   <span>${escapeHtml(record.timeToResult || "срок не указан")}</span>
                 </div>
+                <button type="button" class="profile-link" data-profile-id="${escapeHtml(record.id)}">Открыть профиль</button>
               </article>
             `;
           })
           .join("")
       : "<div class=\"empty-state\">Кейсы для выбранного сегмента не найдены.</div>";
+  }
+
+  function renderProfile(record) {
+    const trajectoryLabels = record.trajectories.map((tag) => trajectoryMap.get(tag)?.label || tag);
+    const impactRows = dictionary.impactLabels
+      .map((label, index) => ({ label, value: record.impact[index] }))
+      .filter((item) => item.value !== null)
+      .map(
+        (item) => `
+          <div class="profile-impact-row">
+            <span>${escapeHtml(item.label)}</span>
+            <strong>${escapeHtml(String(item.value))}</strong>
+          </div>
+        `,
+      )
+      .join("");
+    const permission = [
+      permissionText(record),
+      record.interviewConsent === "Да" ? "Готов к интервью" : "Интервью не подтверждено",
+      record.evidenceCount ? `${record.evidenceCount} подтверждений` : "Подтверждений нет",
+    ];
+
+    $("#profileBody").innerHTML = `
+      <header class="profile-header">
+        <div>
+          <p class="eyebrow">${escapeHtml(trajectoryMap.get(record.primaryTrajectory)?.label || "Профиль участника")}</p>
+          <h2 id="profileTitle">${escapeHtml(record.displayName || record.id)}</h2>
+          <p class="profile-subtitle">${escapeHtml(record.region || "Регион не указан")} · ${escapeHtml(record.professionalLevel || "уровень не указан")}</p>
+        </div>
+        <div class="profile-stats" aria-label="Ключевые параметры профиля">
+          <div class="profile-stat">
+            <span>Индекс влияния</span>
+            <strong>${escapeHtml(record.impactIndex ? decimalFormat.format(record.impactIndex) : "н/д")}</strong>
+          </div>
+          <div class="profile-stat">
+            <span>Рекомендация</span>
+            <strong>${escapeHtml(record.recommendation ?? "н/д")}</strong>
+          </div>
+          <div class="profile-stat">
+            <span>Срок результата</span>
+            <strong>${escapeHtml(compactLabel(record.timeToResult || "н/д", 26))}</strong>
+          </div>
+          <div class="profile-stat">
+            <span>Год участия</span>
+            <strong>${escapeHtml(record.latestYear || "н/д")}</strong>
+          </div>
+        </div>
+      </header>
+      <div class="profile-layout">
+        <div class="profile-main">
+          ${profileCard("Достижения", listItems(record.achievementItems && record.achievementItems.length ? record.achievementItems : [record.caseSummary].filter(Boolean)))}
+          ${textCard("Примененные навыки", record.skillsSummary)}
+          ${textCard("Публикации, выставки, выступления или победы", record.publicationsSummary)}
+          ${textCard("Дальнейшая связь с Таврида.АРТ", record.futureLink)}
+          ${textCard("Почему рекомендует программу", record.recommendReason)}
+        </div>
+        <aside class="profile-side" aria-label="Данные профиля">
+          ${profileCard("Участие", chips([...(record.programs || []), ...(record.programDetails || [])]))}
+          ${profileCard("Направления", chips(record.directions))}
+          ${profileCard("Занятость и сфера", chips([...(record.employment || []), record.primaryActivity, record.additionalActivity]))}
+          ${profileCard("Связь успеха с программой", `<p>${escapeHtml(record.attribution || "Нет данных в анкете.")}</p>`)}
+          ${profileCard("Траектории", chips(trajectoryLabels))}
+          ${profileCard("Ценное в опыте", chips(record.factors))}
+          ${profileCard("Нужная поддержка", chips(record.supportNeeds))}
+          ${profileCard("Права и подтверждения", chips(permission))}
+          ${profileCard("Оценки влияния", impactRows || "<p>Нет данных в анкете.</p>")}
+        </aside>
+      </div>
+    `;
+  }
+
+  function openProfile(recordId) {
+    const record = records.find((item) => item.id === recordId);
+    if (!record) return;
+    state.selectedProfileId = recordId;
+    renderProfile(record);
+    $("#profileModal").classList.add("is-open");
+    $("#profileModal").setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    $(".profile-dialog").focus();
+  }
+
+  function closeProfile() {
+    state.selectedProfileId = null;
+    $("#profileModal").classList.remove("is-open");
+    $("#profileModal").setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
   }
 
   function renderInsight(list) {
@@ -590,6 +704,29 @@
       render();
     });
 
+    $("#caseGrid").addEventListener("click", (event) => {
+      const target = event.target.closest("[data-profile-id]");
+      if (!target) return;
+      openProfile(target.getAttribute("data-profile-id"));
+    });
+
+    $("#caseGrid").addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const target = event.target.closest("[data-profile-id]");
+      if (!target) return;
+      event.preventDefault();
+      openProfile(target.getAttribute("data-profile-id"));
+    });
+
+    document.querySelectorAll("[data-close-profile]").forEach((element) => {
+      element.addEventListener("click", closeProfile);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && $("#profileModal").classList.contains("is-open")) {
+        closeProfile();
+      }
+    });
   }
 
   function setupStaticText() {
