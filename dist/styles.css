@@ -40,6 +40,52 @@ body {
   line-height: 1.5;
 }
 
+.has-full-text {
+  cursor: help;
+}
+
+.row-label.has-full-text,
+.case-meta .has-full-text,
+.profile-stat .has-full-text {
+  text-decoration: underline dotted rgba(15, 118, 110, 0.55);
+  text-underline-offset: 3px;
+}
+
+.has-full-text:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.text-tooltip {
+  position: fixed;
+  z-index: 300;
+  width: max-content;
+  max-width: min(460px, calc(100vw - 24px));
+  max-height: min(50vh, 360px);
+  overflow: auto;
+  padding: 9px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  background: #263140;
+  box-shadow: 0 12px 32px rgba(24, 32, 44, 0.24);
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
+}
+
+.text-tooltip.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 button,
 input,
 select {
@@ -1453,6 +1499,17 @@ a {
 
   .profile-header {
     padding-right: 48px;
+  }
+}
+
+@media (hover: none) {
+  .has-full-text {
+    cursor: inherit;
+    text-decoration: none;
+  }
+
+  .text-tooltip {
+    display: none;
   }
 }
 

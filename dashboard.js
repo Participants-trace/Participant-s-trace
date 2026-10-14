@@ -96,6 +96,23 @@
     return label.length > size ? `${label.slice(0, size - 1).trim()}…` : label;
   }
 
+  function compactText(value, size, options = {}) {
+    const sourceText = String(value ?? "");
+    const fullText = sourceText || String(options.fallback ?? "");
+    const visibleText = compactLabel(fullText, size);
+    const isTruncated = visibleText !== fullText;
+    const tag = options.tag || "span";
+    const classNames = [options.className, isTruncated ? "has-full-text" : ""].filter(Boolean).join(" ");
+    const attributes = [
+      classNames ? `class="${classNames}"` : "",
+      isTruncated ? `data-full-text="${escapeHtml(fullText)}"` : "",
+      isTruncated && options.focusable !== false ? 'tabindex="0" aria-describedby="textTooltip"' : "",
+    ]
+      .filter(Boolean)
+      .join(" ");
+    return `<${tag}${attributes ? ` ${attributes}` : ""}>${escapeHtml(visibleText)}</${tag}>`;
+  }
+
   function listItems(items) {
     const clean = (items || []).filter(Boolean);
     if (!clean.length) return "<p>Нет данных в анкете.</p>";
@@ -142,7 +159,18 @@
       const toggle = answer.querySelector("[data-expand-answer]");
       if (!text || !toggle) return;
       const expanded = answer.classList.contains("is-expanded");
-      toggle.hidden = !expanded && text.scrollHeight <= text.clientHeight + 1;
+      const isClipped = !expanded && text.scrollHeight > text.clientHeight + 1;
+      toggle.hidden = !expanded && !isClipped;
+      text.classList.toggle("has-full-text", isClipped);
+      if (isClipped) {
+        text.dataset.fullText = text.textContent.trim();
+        text.tabIndex = 0;
+        text.setAttribute("aria-describedby", "textTooltip");
+      } else {
+        text.removeAttribute("data-full-text");
+        text.removeAttribute("tabindex");
+        text.removeAttribute("aria-describedby");
+      }
     });
   }
 
@@ -243,7 +271,7 @@
     return `
       <div class="bar-row">
         <div class="row-top">
-          <span class="row-label">${escapeHtml(compactLabel(item.label, options.labelSize || 92))}</span>
+          ${compactText(item.label, options.labelSize || 92, { className: "row-label" })}
           <span class="row-value">${escapeHtml(valueLabel)}</span>
         </div>
         <div class="track" aria-hidden="true">
@@ -469,6 +497,9 @@
             const impact = record.impactIndex ? decimalFormat.format(record.impactIndex) : "н/д";
             const evidenceLabel =
               record.evidenceCount > 0 ? `${record.evidenceCount} подтвержд.` : "без файла";
+            const caseText = record.caseSummary || record.skillsSummary || record.futureLink || "";
+            const fullCaseText = record.achievementItems?.join(" ") || record.skillsSummary || record.futureLink || caseText;
+            const caseTextIsTruncated = caseText.endsWith("…") && fullCaseText !== caseText;
             return `
               <article class="case-card" role="button" tabindex="0" data-profile-id="${escapeHtml(record.id)}" aria-label="Открыть профиль ${escapeHtml(record.displayName || record.id)}">
                 <header>
@@ -478,12 +509,12 @@
                   </div>
                   <span class="case-score">${escapeHtml(impact)}</span>
                 </header>
-                <p class="case-text">${escapeHtml(record.caseSummary || record.skillsSummary || record.futureLink)}</p>
+                <p class="case-text${caseTextIsTruncated ? " has-full-text" : ""}"${caseTextIsTruncated ? ` data-full-text="${escapeHtml(fullCaseText)}"` : ""}>${escapeHtml(caseText)}</p>
                 <div class="case-meta" aria-label="Параметры кейса">
                   <span>${escapeHtml(record.region || "Регион не указан")}</span>
                   <span>${escapeHtml(record.latestYear || "год не указан")}</span>
-                  <span>${escapeHtml(compactLabel(record.programs.join(", "), 48) || "программа не указана")}</span>
-                  <span>${escapeHtml(compactLabel(record.directions.join(", "), 48) || "направление не указано")}</span>
+                  ${compactText(record.programs.join(", "), 48, { fallback: "программа не указана", focusable: false })}
+                  ${compactText(record.directions.join(", "), 48, { fallback: "направление не указано", focusable: false })}
                 </div>
                 <div class="case-flags">
                   <span class="${record.evidenceCount > 0 ? "good" : "warn"}">${escapeHtml(evidenceLabel)}</span>
@@ -540,7 +571,7 @@
           </div>
           <div class="profile-stat">
             <span>Срок результата</span>
-            <strong>${escapeHtml(compactLabel(record.timeToResult || "н/д", 26))}</strong>
+            ${compactText(record.timeToResult, 26, { fallback: "н/д", tag: "strong" })}
           </div>
           <div class="profile-stat">
             <span>Год участия</span>
@@ -757,6 +788,7 @@
       const expanded = answer.classList.toggle("is-expanded");
       toggle.setAttribute("aria-expanded", String(expanded));
       toggle.textContent = expanded ? "Свернуть" : "Развернуть";
+      updateExpandableAnswers();
     });
 
     window.addEventListener("resize", updateExpandableAnswers);
@@ -768,6 +800,83 @@
     });
   }
 
+  function setupTextTooltip() {
+    const tooltip = $("#textTooltip");
+    if (!tooltip) return;
+    let activeTarget = null;
+    let hideTimer = null;
+
+    function cancelHide() {
+      if (!hideTimer) return;
+      window.clearTimeout(hideTimer);
+      hideTimer = null;
+    }
+
+    function positionTooltip(target) {
+      const gap = 8;
+      const viewportPadding = 12;
+      const targetRect = target.getBoundingClientRect();
+      const tooltipRect = tooltip.getBoundingClientRect();
+      let left = targetRect.left;
+      let top = targetRect.bottom + gap;
+
+      left = Math.max(viewportPadding, Math.min(left, window.innerWidth - tooltipRect.width - viewportPadding));
+      if (top + tooltipRect.height > window.innerHeight - viewportPadding) {
+        top = targetRect.top - tooltipRect.height - gap;
+      }
+      top = Math.max(viewportPadding, top);
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+    }
+
+    function showTooltip(target) {
+      const fullText = target?.dataset.fullText?.trim();
+      if (!fullText || window.matchMedia("(hover: none)").matches) return;
+      cancelHide();
+      activeTarget = target;
+      tooltip.textContent = fullText;
+      tooltip.setAttribute("aria-hidden", "false");
+      tooltip.classList.add("is-visible");
+      positionTooltip(target);
+    }
+
+    function hideTooltip(target) {
+      if (target && activeTarget && target !== activeTarget) return;
+      cancelHide();
+      activeTarget = null;
+      tooltip.classList.remove("is-visible");
+      tooltip.setAttribute("aria-hidden", "true");
+    }
+
+    function scheduleHide(target) {
+      cancelHide();
+      hideTimer = window.setTimeout(() => hideTooltip(target), 140);
+    }
+
+    document.addEventListener("pointerover", (event) => {
+      const target = event.target.closest("[data-full-text]");
+      if (!target || target === activeTarget) return;
+      showTooltip(target);
+    });
+    document.addEventListener("pointerout", (event) => {
+      const target = event.target.closest("[data-full-text]");
+      if (!target || target.contains(event.relatedTarget)) return;
+      scheduleHide(target);
+    });
+    document.addEventListener("focusin", (event) => {
+      const target = event.target.closest("[data-full-text]");
+      if (target) showTooltip(target);
+    });
+    document.addEventListener("focusout", (event) => {
+      const target = event.target.closest("[data-full-text]");
+      if (target) hideTooltip(target);
+    });
+    tooltip.addEventListener("pointerenter", cancelHide);
+    tooltip.addEventListener("pointerleave", () => scheduleHide(activeTarget));
+    window.addEventListener("scroll", () => hideTooltip(), true);
+    window.addEventListener("resize", () => hideTooltip());
+  }
+
   function setupStaticText() {
     $("#responseBadge").textContent = `${source.meta.responses} ответ`;
     $("#periodBadge").textContent = `${source.meta.responsePeriod.from} — ${source.meta.responsePeriod.to}`;
@@ -775,5 +884,6 @@
 
   setupStaticText();
   setupFilters();
+  setupTextTooltip();
   render();
 })();
