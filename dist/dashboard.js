@@ -53,6 +53,14 @@
     return percentFormat.format(part / total);
   }
 
+  function precisePercent(value) {
+    return `${decimalFormat.format(value * 100)}%`;
+  }
+
+  function signedPercent(value) {
+    return `${value > 0 ? "+" : ""}${precisePercent(value)}`;
+  }
+
   function average(values) {
     const valid = values.filter((value) => Number.isFinite(value));
     if (!valid.length) return null;
@@ -109,8 +117,33 @@
     `;
   }
 
-  function textCard(title, text) {
-    return profileCard(title, text ? `<p>${escapeHtml(text)}</p>` : "<p>Нет данных в анкете.</p>");
+  function textCard(title, text, answerId) {
+    if (!text) return profileCard(title, "<p>Нет данных в анкете.</p>");
+    const contentId = `profile-answer-${answerId}`;
+    return profileCard(
+      title,
+      `<div class="expandable-answer" data-expandable-answer>
+        <p class="expandable-answer-text" id="${contentId}">${escapeHtml(text)}</p>
+        <button
+          type="button"
+          class="expandable-answer-toggle"
+          data-expand-answer
+          aria-expanded="false"
+          aria-controls="${contentId}"
+          hidden
+        >Развернуть</button>
+      </div>`,
+    );
+  }
+
+  function updateExpandableAnswers() {
+    document.querySelectorAll("#profileBody [data-expandable-answer]").forEach((answer) => {
+      const text = answer.querySelector(".expandable-answer-text");
+      const toggle = answer.querySelector("[data-expand-answer]");
+      if (!text || !toggle) return;
+      const expanded = answer.classList.contains("is-expanded");
+      toggle.hidden = !expanded && text.scrollHeight <= text.clientHeight + 1;
+    });
   }
 
   function materialsCard(record) {
@@ -239,8 +272,12 @@
     const impactAverage = average(list.map((record) => record.impactIndex).filter((value) => value !== null));
     const scores = list.map((record) => record.recommendation).filter((value) => Number.isFinite(value));
     const promoters = scores.filter((score) => score >= 9).length;
+    const passives = scores.filter((score) => score >= 7 && score <= 8).length;
     const detractors = scores.filter((score) => score <= 6).length;
-    const nps = scores.length ? Math.round((promoters / scores.length - detractors / scores.length) * 100) : 0;
+    const promoterShare = scores.length ? promoters / scores.length : 0;
+    const passiveShare = scores.length ? passives / scores.length : 0;
+    const detractorShare = scores.length ? detractors / scores.length : 0;
+    const nps = promoterShare - detractorShare;
     const evidence = list.filter((record) => record.evidenceCount > 0).length;
     const interview = list.filter((record) => record.interviewConsent === "Да").length;
 
@@ -250,7 +287,12 @@
       kpiCard("Сильная связь", percent(strong.length, total), `${strong.length} участников видят ключевой вклад`),
       kpiCard("Результат до 6 месяцев", percent(withinSix.length, timeBase.length), `${withinSix.length} из ${timeBase.length || 0} ответов с указанным сроком`, "green"),
       kpiCard("Индекс влияния", impactAverage ? decimalFormat.format(impactAverage) : "0,00", "среднее по десяти аспектам 1–5", "teal"),
-      kpiCard("NPS", scores.length ? `${nps > 0 ? "+" : ""}${nps}` : "0", `${promoters} промоутеров, ${detractors} критиков`, "blue"),
+      kpiCard(
+        "NPS",
+        scores.length ? signedPercent(nps) : "0,00%",
+        `Приверженцы ${precisePercent(promoterShare)} - критики ${precisePercent(detractorShare)}; нейтралы ${precisePercent(passiveShare)}`,
+        "blue",
+      ),
       kpiCard("Подтверждения", percent(evidence, total), `${evidence} участников приложили файлы или ссылки`, "amber"),
       kpiCard("Готовы к интервью", percent(interview, total), `${interview} участников можно звать на глубинное интервью`, "green"),
     ].join("");
@@ -510,10 +552,10 @@
         <div class="profile-main">
           ${profileCard("Достижения", listItems(record.achievementItems && record.achievementItems.length ? record.achievementItems : [record.caseSummary].filter(Boolean)))}
           ${materialsCard(record)}
-          ${textCard("Примененные навыки", record.skillsSummary)}
-          ${textCard("Публикации, выставки, выступления или победы", record.publicationsSummary)}
-          ${textCard("Дальнейшая связь с Таврида.АРТ", record.futureLink)}
-          ${textCard("Почему рекомендует программу", record.recommendReason)}
+          ${textCard("Примененные навыки", record.skillsSummary, "skills")}
+          ${textCard("Публикации, выставки, выступления или победы", record.publicationsSummary, "publications")}
+          ${textCard("Дальнейшая связь с Таврида.АРТ", record.futureLink, "future")}
+          ${textCard("Почему рекомендует программу", record.recommendReason, "recommendation")}
         </div>
         <aside class="profile-side" aria-label="Данные профиля">
           ${profileCard("Участие", chips([...(record.programs || []), ...(record.programDetails || [])]))}
@@ -528,6 +570,7 @@
         </aside>
       </div>
     `;
+    requestAnimationFrame(updateExpandableAnswers);
   }
 
   function openProfile(recordId) {
@@ -535,10 +578,12 @@
     if (!record) return;
     state.selectedProfileId = recordId;
     renderProfile(record);
+    const dialog = $(".profile-dialog");
     $("#profileModal").classList.add("is-open");
     $("#profileModal").setAttribute("aria-hidden", "false");
     document.body.classList.add("modal-open");
-    $(".profile-dialog").focus();
+    dialog.scrollTop = 0;
+    dialog.focus({ preventScroll: true });
   }
 
   function closeProfile() {
@@ -704,6 +749,17 @@
     document.querySelectorAll("[data-close-profile]").forEach((element) => {
       element.addEventListener("click", closeProfile);
     });
+
+    $("#profileBody").addEventListener("click", (event) => {
+      const toggle = event.target.closest("[data-expand-answer]");
+      if (!toggle) return;
+      const answer = toggle.closest("[data-expandable-answer]");
+      const expanded = answer.classList.toggle("is-expanded");
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.textContent = expanded ? "Свернуть" : "Развернуть";
+    });
+
+    window.addEventListener("resize", updateExpandableAnswers);
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && $("#profileModal").classList.contains("is-open")) {

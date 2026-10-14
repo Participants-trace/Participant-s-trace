@@ -236,12 +236,12 @@ def normalize(text: str) -> str:
     return text.lower().replace("ё", "е")
 
 
-def redact(text: str, limit: int = 360) -> str:
+def redact(text: str, limit: int | None = 360) -> str:
     clean = URL_RE.sub("[ссылка]", text)
     clean = EMAIL_RE.sub("[email]", clean)
     clean = PHONE_RE.sub("[телефон]", clean)
     clean = re.sub(r"\s+", " ", clean).strip()
-    if len(clean) > limit:
+    if limit is not None and len(clean) > limit:
         return clean[: limit - 1].rstrip() + "…"
     return clean
 
@@ -469,14 +469,14 @@ def main() -> None:
             "factors": factors,
             "repeatParticipation": cell(row, 91),
             "recommendation": recommendation,
-            "recommendReason": redact(cell(row, 93), 240),
+            "recommendReason": redact(cell(row, 93), None),
             "motivations": motivations,
             "supportNeeds": supports,
-            "futureLink": redact(future_text, 280),
+            "futureLink": redact(future_text, None),
             "caseSummary": case_summary,
-            "achievementItems": [redact(text, 460) for text in achievement_items] if flags["caseAllowed"] else [],
-            "skillsSummary": redact(skills_text, 240) if flags["caseAllowed"] else "",
-            "publicationsSummary": redact(cell(row, 68), 220) if flags["caseAllowed"] else "",
+            "achievementItems": [redact(text, None) for text in achievement_items] if flags["caseAllowed"] else [],
+            "skillsSummary": redact(skills_text, None) if flags["caseAllowed"] else "",
+            "publicationsSummary": redact(cell(row, 68), None) if flags["caseAllowed"] else "",
             "missingSummary": redact(missing_text, 220),
             "missingTags": missing_tags,
             "trajectories": trajectories,
