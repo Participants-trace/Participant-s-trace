@@ -23,6 +23,13 @@
     search: "",
     caseLimit: 12,
     selectedProfileId: null,
+    expandedSegments: {
+      programs: false,
+      directions: false,
+      regions: false,
+      levels: false,
+      years: false,
+    },
   };
 
   const timeOrder = [
@@ -40,12 +47,42 @@
   const numberFormat = new Intl.NumberFormat("ru-RU");
   const decimalFormat = new Intl.NumberFormat("ru-RU", { maximumFractionDigits: 2, minimumFractionDigits: 2 });
   const percentFormat = new Intl.NumberFormat("ru-RU", { style: "percent", maximumFractionDigits: 0 });
+  const wordForms = {
+    answer: ["ответ", "ответа", "ответов"],
+    participant: ["участник", "участника", "участников"],
+    case: ["кейс", "кейса", "кейсов"],
+    rating: ["оценка", "оценки", "оценок"],
+    material: ["материал", "материала", "материалов"],
+  };
 
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, (char) => {
       const map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#039;" };
       return map[char];
     });
+  }
+
+  function isSingularCount(value) {
+    const number = Math.abs(Number(value));
+    return number % 10 === 1 && number % 100 !== 11;
+  }
+
+  function pluralWord(value, forms) {
+    const number = Math.abs(Number(value));
+    const lastTwo = number % 100;
+    const last = number % 10;
+    if (lastTwo >= 11 && lastTwo <= 14) return forms[2];
+    if (last === 1) return forms[0];
+    if (last >= 2 && last <= 4) return forms[1];
+    return forms[2];
+  }
+
+  function countWithWord(value, forms) {
+    return `${numberFormat.format(value)} ${pluralWord(value, forms)}`;
+  }
+
+  function genitiveCount(value, singularForm, pluralForm) {
+    return `${numberFormat.format(value)} ${isSingularCount(value) ? singularForm : pluralForm}`;
   }
 
   function percent(part, total) {
@@ -204,7 +241,7 @@
       .join("");
 
     const hiddenNote = record.restrictedEvidenceCount
-      ? `<p class="material-note">${escapeHtml(numberFormat.format(record.restrictedEvidenceCount))} материал(ов) отмечено ограничением по разрешению участника.</p>`
+      ? `<p class="material-note">${escapeHtml(countWithWord(record.restrictedEvidenceCount, wordForms.material))} ${isSingularCount(record.restrictedEvidenceCount) ? "отмечен" : "отмечены"} ограничением по разрешению участника.</p>`
       : "";
     return profileCard("Материалы и подтверждения", `<div class="material-list">${links}</div>${hiddenNote}`);
   }
@@ -310,10 +347,10 @@
     const interview = list.filter((record) => record.interviewConsent === "Да").length;
 
     $("#kpiGrid").innerHTML = [
-      kpiCard("Участники", numberFormat.format(total), `из ${numberFormat.format(records.length)} ответов в выгрузке`, "blue"),
-      kpiCard("Есть связь с программой", percent(positive.length, total), `${positive.length} участников, включая частичную связь`),
-      kpiCard("Сильная связь", percent(strong.length, total), `${strong.length} участников видят ключевой вклад`),
-      kpiCard("Результат до 6 месяцев", percent(withinSix.length, timeBase.length), `${withinSix.length} из ${timeBase.length || 0} ответов с указанным сроком`, "green"),
+      kpiCard("Участники", numberFormat.format(total), `Всего в выгрузке — ${countWithWord(records.length, wordForms.answer)}`, "blue"),
+      kpiCard("Есть связь с программой", percent(positive.length, total), `${countWithWord(positive.length, wordForms.participant)}, включая частичную связь`),
+      kpiCard("Сильная связь", percent(strong.length, total), `${countWithWord(strong.length, wordForms.participant)} ${isSingularCount(strong.length) ? "видит" : "видят"} ключевой вклад`),
+      kpiCard("Результат до 6 месяцев", percent(withinSix.length, timeBase.length), `${numberFormat.format(withinSix.length)} из ${genitiveCount(timeBase.length, "участника", "участников")} ${isSingularCount(withinSix.length) ? "получил" : "получили"} результат в этот срок`, "green"),
       kpiCard("Индекс влияния", impactAverage ? decimalFormat.format(impactAverage) : "0,00", "среднее по десяти аспектам 1–5", "teal"),
       kpiCard(
         "NPS",
@@ -321,8 +358,8 @@
         `Приверженцы ${precisePercent(promoterShare)} - критики ${precisePercent(detractorShare)}; нейтралы ${precisePercent(passiveShare)}`,
         "blue",
       ),
-      kpiCard("Подтверждения", percent(evidence, total), `${evidence} участников приложили файлы или ссылки`, "amber"),
-      kpiCard("Готовы к интервью", percent(interview, total), `${interview} участников можно звать на глубинное интервью`, "green"),
+      kpiCard("Подтверждения", percent(evidence, total), `${countWithWord(evidence, wordForms.participant)} ${isSingularCount(evidence) ? "приложил" : "приложили"} файлы или ссылки`, "amber"),
+      kpiCard("Готовы к интервью", percent(interview, total), `${genitiveCount(interview, "участника", "участников")} можно звать на глубинное интервью`, "green"),
     ].join("");
   }
 
@@ -365,7 +402,7 @@
               <div class="impact-row">
                 <div>
                   <div class="impact-label">${escapeHtml(item.label)}</div>
-                  <div class="impact-meta">${escapeHtml(`${item.count} оценок, ${item.difficult} затруднились`)}</div>
+                  <div class="impact-meta">${escapeHtml(`${countWithWord(item.count, wordForms.rating)}, ${countWithWord(item.difficult, wordForms.participant)} ${isSingularCount(item.difficult) ? "затруднился" : "затруднились"}`)}</div>
                 </div>
                 <div class="track" aria-hidden="true">
                   <div class="fill" style="--width:${width}%; --bar-color:#0f766e;"></div>
@@ -448,23 +485,34 @@
   }
 
   function renderSegments(list) {
-    renderBarList($("#segmentPrograms"), multiCounter(list, (record) => record.programs), list.length, {
+    const renderSegmentList = (key, items, limit, options) => {
+      const expanded = state.expandedSegments[key];
+      const visibleItems = expanded ? items : items.slice(0, limit);
+      const container = $(`#segment${key[0].toUpperCase()}${key.slice(1)}`);
+      const toggle = document.querySelector(`[data-segment-toggle="${key}"]`);
+      renderBarList(container, visibleItems, list.length, options);
+      toggle.hidden = items.length <= limit;
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.textContent = expanded ? "Свернуть" : `Показать все (${numberFormat.format(items.length)})`;
+    };
+
+    renderSegmentList("programs", multiCounter(list, (record) => record.programs), 6, {
       scaleToMax: true,
       labelSize: 54,
     });
-    renderBarList($("#segmentDirections"), multiCounter(list, (record) => record.directions).slice(0, 10), list.length, {
+    renderSegmentList("directions", multiCounter(list, (record) => record.directions), 10, {
       scaleToMax: true,
       labelSize: 54,
     });
-    renderBarList($("#segmentRegions"), counter(list.map((record) => record.region)).slice(0, 10), list.length, {
+    renderSegmentList("regions", counter(list.map((record) => record.region)), 10, {
       scaleToMax: true,
       labelSize: 54,
     });
-    renderBarList($("#segmentLevels"), counter(list.map((record) => record.professionalLevel)), list.length, {
+    renderSegmentList("levels", counter(list.map((record) => record.professionalLevel)), 6, {
       scaleToMax: true,
       labelSize: 46,
     });
-    renderBarList($("#segmentYears"), counter(list.map((record) => record.latestYear || "Не указан")).slice(0, 6), list.length, {
+    renderSegmentList("years", counter(list.map((record) => record.latestYear || "Не указан")), 6, {
       scaleToMax: true,
       labelSize: 34,
     });
@@ -487,7 +535,7 @@
       .sort((a, b) => b.qualityScore - a.qualityScore || (b.impactIndex || 0) - (a.impactIndex || 0));
     const visible = cases.slice(0, state.caseLimit);
 
-    $("#casesMeta").textContent = `${numberFormat.format(cases.length)} кейсов в выбранном сегменте, показано ${numberFormat.format(visible.length)}.`;
+    $("#casesMeta").textContent = `В выбранном сегменте: ${countWithWord(cases.length, wordForms.case)}. Карточек на странице: ${numberFormat.format(visible.length)}.`;
     $("#showMoreCases").style.display = visible.length < cases.length ? "inline-flex" : "none";
 
     $("#caseGrid").innerHTML = visible.length
@@ -639,7 +687,7 @@
     const strong = list.filter((record) => record.strongAttribution).length;
     const evidence = list.filter((record) => record.evidenceCount > 0).length;
     const text = [
-      `В выбранной группе ${numberFormat.format(list.length)} участников.`,
+      `В выбранной группе ${countWithWord(list.length, wordForms.participant)}.`,
       `Сильную или полную связь с программой видят ${percent(strong, list.length)}.`,
       topImpact
         ? `Самый сильный аспект влияния: ${topImpact.label.toLowerCase()} (${decimalFormat.format(topImpact.avg)} из 5).`
@@ -650,7 +698,7 @@
       topTrajectory
         ? `Главная траектория по открытым ответам: ${topTrajectory.label.toLowerCase()}.`
         : "",
-      `${numberFormat.format(evidence)} кейсов имеют подтверждающие материалы или внешние ссылки.`,
+      `${countWithWord(evidence, wordForms.case)} ${isSingularCount(evidence) ? "имеет" : "имеют"} подтверждающие материалы или внешние ссылки.`,
     ].filter(Boolean);
     $("#segmentInsight").textContent = text.join(" ");
   }
@@ -667,8 +715,8 @@
     if (state.evidence !== "all") active.push("фильтр подтверждений");
     if (state.search) active.push(`поиск: ${state.search}`);
     $("#filterStatus").textContent = active.length
-      ? `${numberFormat.format(list.length)} ответов после фильтрации: ${active.join("; ")}.`
-      : `${numberFormat.format(list.length)} ответов, фильтры не применены.`;
+      ? `${countWithWord(list.length, wordForms.answer)} после фильтрации: ${active.join("; ")}.`
+      : `${countWithWord(list.length, wordForms.answer)}, фильтры не применены.`;
   }
 
   function render() {
@@ -761,6 +809,14 @@
     $("#showMoreCases").addEventListener("click", () => {
       state.caseLimit += 12;
       render();
+    });
+
+    document.querySelectorAll("[data-segment-toggle]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const key = button.getAttribute("data-segment-toggle");
+        state.expandedSegments[key] = !state.expandedSegments[key];
+        renderSegments(filteredRecords());
+      });
     });
 
     $("#caseGrid").addEventListener("click", (event) => {
@@ -878,7 +934,7 @@
   }
 
   function setupStaticText() {
-    $("#responseBadge").textContent = `${source.meta.responses} ответ`;
+    $("#responseBadge").textContent = countWithWord(source.meta.responses, wordForms.answer);
     $("#periodBadge").textContent = `${source.meta.responsePeriod.from} — ${source.meta.responsePeriod.to}`;
   }
 
